@@ -1,12 +1,27 @@
-const { lock } = require("../index");
+const { lock, unlock, isLocked } = require("../index");
+
+const FILE_PATH = "tmp/das1";
+
+const interval = setInterval(() => {
+  console.log("Wait to lock file from other process...");
+}, 1000);
 
 (async () => {
-  const res = await lock("tmp/das1").catch((e) => {
-    console.error("Failed to say", e);
+  console.log(`File ${FILE_PATH} is locked: `, await isLocked(FILE_PATH));
+  const res = await lock(FILE_PATH).catch((e) => {
+    console.error("Failed to lock file", e);
   });
-  console.log(1, res);
+  if (res === undefined) {
+    return;
+  }
+  console.log("File locked", res);
+  const timeout = 5000;
+  console.log(`Waithing ${timeout / 1000} seconds to unlock`);
+  setTimeout(async () => {
+    await unlock(res).catch((e) => {
+      console.error("Failed to unlock", e);
+    });
+    console.log("File unlocked");
+    clearInterval(interval);
+  }, timeout);
 })();
-
-setInterval(() => {
-  console.log("Async");
-}, 1000);
