@@ -1,16 +1,20 @@
 {
   "name": "flock-cpp",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "compile": "g++ main.cc -o out && ./out",
+    "compile": "g++ src/main.cc -o out/flock && ./out/flock",
     "build": "node-gyp configure && node-gyp build",
     "install": "node-gyp rebuild",
-    "test": "node index.js"
+    "test": "node test/index.js",
+    "start": "npm run build && npm run test"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Sergei Kolmiller",
+  "license": "MIT",
   "gypfile": true,
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.10.2"
+  }
 }

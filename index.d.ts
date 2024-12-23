@@ -1,0 +1,1 @@
+export function lock(path: string): Promise<void>

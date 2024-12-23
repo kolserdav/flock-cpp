@@ -1,3 +1,3 @@
-const hello = require('./build/Release/hello');
+const flock = require("./build/Release/flock.node");
 
-console.log(hello.sayHello());
+module.exports = { ...flock };

@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "checkJs": true,
+    "allowJs": true,
+    "emitDeclarationOnly": true,
+    "declaration": true
+  },
+  "include": ["*.js", "*.d.ts", "test/*.js"]
+}

@@ -2,12 +2,10 @@
 #include <chrono>
 #include <cstdio>
 #include <cstring>
-#include <fcntl.h>
 #include <iostream>
 #include <string>
 #include <sys/file.h>
 #include <thread>
-#include <unistd.h>
 
 class FileLock {
 public:
