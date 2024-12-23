@@ -1,0 +1,16 @@
+{
+  "name": "flock-cpp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "compile": "g++ main.cc -o out && ./out",
+    "build": "node-gyp configure && node-gyp build",
+    "install": "node-gyp rebuild",
+    "test": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "gypfile": true,
+  "description": ""
+}

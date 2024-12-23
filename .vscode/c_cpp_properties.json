@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/../node/deps/v8/src/compiler",
+                "${workspaceFolder}/../node/deps/v8",
+                "${workspaceFolder}/../node/deps/v8/include",
+                "${workspaceFolder}/../node/out/Release/obj/gen/generate-bytecode-output-root"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-clang-x64"
+        }
+    ],
+    "version": 4
+}
