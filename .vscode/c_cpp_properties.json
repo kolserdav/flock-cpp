@@ -4,10 +4,12 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
+                "${workspaceFolder}/../node/src",
                 "${workspaceFolder}/../node/deps/v8/src/compiler",
                 "${workspaceFolder}/../node/deps/v8",
                 "${workspaceFolder}/../node/deps/v8/include",
-                "${workspaceFolder}/../node/out/Release/obj/gen/generate-bytecode-output-root"
+                "${workspaceFolder}/../node/out/Release/obj/gen/generate-bytecode-output-root",
+                "${workspaceFolder}/../node/out/Release/obj/gen"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",

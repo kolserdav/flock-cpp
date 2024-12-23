@@ -15,7 +15,8 @@ void SayHello(const FunctionCallbackInfo<v8::Value> &args) {
       String::NewFromUtf8(isolate, "Hello, World!").ToLocalChecked());
 }
 
-void Initialize(Local<Object> exports) {
+void Initialize(v8::Local<v8::Object> exports, v8::Local<v8::Value> module,
+                void *priv) {
   Isolate *isolate = Isolate::GetCurrent();
   exports
       ->Set(isolate->GetCurrentContext(),
